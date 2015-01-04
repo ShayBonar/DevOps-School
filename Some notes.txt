@@ -2,7 +2,8 @@
 
 git diff branch_1 branch_2
 
-#To overwrite files (getting updated changes) without completly merging the files from master to a branch:
+#To overwrite files (getting updated changes) without completly merging the files 
+#from master to a branch:
 
 git checkout master file_name
 
