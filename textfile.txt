@@ -1,6 +1,0 @@
-#To overwrite files (getting updated changes) without completly merging the files from master to a branch:
-
-git checkout master
-git merge -s ours shay
-
-#Where shay is the branch we want to overwrite but not completly merge
