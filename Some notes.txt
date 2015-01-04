@@ -1,0 +1,9 @@
+#To check what files are diffrent from branch to branch:
+
+git diff branch_1 branch_2
+
+#To overwrite files (getting updated changes) without completly merging the files from master to a branch:
+
+git checkout master file_name
+
+#Where shay is the branch we want to overwrite but not completly merge
