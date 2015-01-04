@@ -6,4 +6,3 @@ git diff branch_1 branch_2
 
 git checkout master file_name
 
-#Where shay is the branch we want to overwrite but not completly merge
