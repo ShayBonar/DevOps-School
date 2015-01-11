@@ -1,0 +1,27 @@
+<project name="Hello World" default="help">
+	<property name="javaBinDir" value="C:\Program Files (x86)\Java\jdk1.8.0\bin"/>
+		
+		<target name="compile">
+			<javac srcdir="src" destdir="paths" includeantruntime="false"/>
+		</target>
+		
+		<target name="run" depends="compile">
+			<java classname="HelloWorld">
+				<classpath path="paths"/>
+			</java>
+		</target>	
+		
+	 <!--		<target name="run-java" depends ="run">
+		   <java executable="C:\Program Files (x86)\Java\jdk1.8.0\bin\jar">
+		   </java>
+		</target>
+	  -->
+		<target name="help" depends ="run">
+		  <exec executable="cmd">
+		    <arg value="/c"/>
+		    <arg value="ant.bat"/>
+		    <arg value="-p"/>
+		  </exec>
+		</target>
+	
+</project>
