@@ -1,27 +1,46 @@
-<project name="Hello World" default="help">
+<project name="Hello World" default="vagrant up">
 	<property name="javaBinDir" value="C:\Program Files (x86)\Java\jdk1.8.0\bin"/>
 		
 		<target name="compile">
 			<javac srcdir="src" destdir="paths" includeantruntime="false"/>
 		</target>
-		
+
+		<target name="vagrant up" depends ="compile">
+			  <exec dir="C:\Users\shay\Desktop\New folder (3)" executable="cmd" inputstring="Hi">
+				  <arg line="/k vagrant up"/>
+			  </exec>
+		</target>
+	
+</project>
+
+
+
+
+	<!--
 		<target name="run" depends="compile">
 			<java classname="HelloWorld">
 				<classpath path="paths"/>
 			</java>
 		</target>	
+		 -->
 		
 	 <!--		<target name="run-java" depends ="run">
 		   <java executable="C:\Program Files (x86)\Java\jdk1.8.0\bin\jar">
 		   </java>
 		</target>
 	  -->
-		<target name="help" depends ="run">
-		  <exec executable="cmd">
-		    <arg value="/c"/>
-		    <arg value="ant.bat"/>
-		    <arg value="-p"/>
-		  </exec>
+	<!--
+	  <arg line="vagrant up" />
+		
+		Edit the vagrant file, and inside it write commands
+		goto git folder where HelloWorld installed and execute in terminal:
+		javac HelloWorld.java
+		java HelloWorld
+	 -->
+	<!--
+		<target name="vagrant init" depends ="run">
+			  <exec dir="C:\Users\shay\Desktop\New folder (3)" executable="cmd" inputstring="Hi">
+			  <arg line="/k vagrant init hashicorp/precise64"/>
+				 </exec>
 		</target>
-	
-</project>
+	 -->
